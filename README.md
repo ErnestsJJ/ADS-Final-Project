@@ -1,7 +1,7 @@
 # ADS Final Project - Task Manager for Students & Professionals
 Repository for the final project of ADS. IEU 2022
 
-What the project does:
+**What the project does:**
 
 
 This app lets you add, delete, and manage tasks to help you organize time better.
@@ -23,21 +23,21 @@ Another preference you can change is the "distribution" of the tasks and you hav
 
 
 
-Why the project is useful:
+**Why the project is useful:**
 
 
 The project is useful because you don't have to worry about time management if you start using this program. Simply by inputting all the tasks you have to do and their deadline, and correctly estimating the time it will take to do each task, everything is planned for you and you just have to follow what you're told. Not only that, you can work in the way YOU like to work by adjusting the preferences.
 
 
 
-How users can get started with the project:
+**How users can get started with the project:**
 
 
 Simply by downloading the files, and running the main.py file.
 
 
 
-Where users can get help with your project:
+**Where users can get help with your project:**
 
 
 By contacting any of the contributors.
@@ -45,7 +45,7 @@ By contacting any of the contributors.
 
 
 
-Who maintains and contributes to the project:
+**Who maintains and contributes to the project:**
 
 
 jmurillo.ieu2021@student.ie.edu

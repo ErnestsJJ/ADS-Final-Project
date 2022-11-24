@@ -20,11 +20,13 @@ class Task(Preferences):
         self.count = self.hoursToComplete
 
     def initializing(self):
+        '''Initializes the task'''
         self.title = input("Title: ").title()
         self.check_deadline()
         self.check_hours_to_complete()
 
     def check_deadline(self):
+        '''Checks whether the entered deadline is valid'''
         while True:
             self.new_year = input("Year (<Enter> if this year): ")
             self.check_year_month(self.new_year, 1)
@@ -55,6 +57,7 @@ class Task(Preferences):
                 break
 
     def check_hours_to_complete(self):
+        '''Checks and receives the hours to complete, as well as error checks'''
         while True:
             while True:
                 try:
@@ -67,6 +70,7 @@ class Task(Preferences):
                 break
 
     def json_converter(self):
+        '''Converts task to JSON format'''
         task_dict = {
             "title": self.title,
             "year": self.year,
@@ -77,24 +81,28 @@ class Task(Preferences):
         return task_dict
 
     def edit_task(self):
+        '''Print statements for edit task option'''
         print(
             f"{self.title} details:\n\tDeadline: {self.year}-{self.month}-{self.day} ({self.daysUntilDeadline} days)\n\tTime to complete: {self.hoursToComplete} hours")
         return int(input(
             "\nWhat do you want to change:\n\t1) Task title\n\t2) Task deadline\n\t3) Task time to complete\n\t4) Nothing\n\n: "))
 
     def days_until_deadline(self, year, month, day):
+        '''Calculates days until deadline'''
         today = datetime.date.today()
         task_deadline = datetime.date(year, month, day)
         days = (task_deadline - today).days
         return days
 
     def change_title(self):
+        '''Changes title'''
         new_title = input("New title: ")
         self.title = new_title
 
     # Error handling
 
     def check_year_month(self, year_month, option):  # Option is 1 if year, 2 if month
+        '''Checks whether year and month entered is valid'''
         while True:
             if year_month != "":
                 try:
@@ -125,6 +133,7 @@ class Task(Preferences):
             break
 
     def check_day(self, day):
+        '''Checks and receives whether the day entered is valid'''
         while True:
             try:
                 int(day)
@@ -151,6 +160,7 @@ class Task(Preferences):
             break
 
     def mark_as_done(self):
+        '''Marks a task as done as well as asks for info'''
         sessions_done = input("How many hours have you completed: ")
         while True:
             try:
@@ -173,4 +183,5 @@ class Task(Preferences):
             return int(sessions_done)
 
     def valid_deadline(self):
+        '''Checks whether deadline is valid'''
         return self.daysUntilDeadline > 1

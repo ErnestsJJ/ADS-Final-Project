@@ -12,9 +12,11 @@ class Preferences:
         self.max_len = self.study_time
 
     def change_created(self):
+        '''Updates the time when a change was created'''
         self.created = datetime.date.today()
 
     def compare_time(self):
+        '''Compares time with previous time'''
         today = datetime.date.today()
         if today != self.created:
             days = (self.created - today).days * -1
@@ -26,6 +28,7 @@ class Preferences:
                     break
 
     def initializing_preferences(self, frequency, distribution, study_time, created, done):
+        '''Takes preferences from JSON and initializes them'''
         self.frequency = frequency
         self.distribution = distribution
         self.study_time = study_time
@@ -34,6 +37,7 @@ class Preferences:
         self.max_len = study_time
 
     def change_study_time(self):
+        '''Changes study time preference (print statements included)'''
         while True:
             try:
                 new_study_time = int(input("New study time per day: "))
@@ -54,18 +58,21 @@ class Preferences:
             break
 
     def change_frequency(self):
+        '''Change frequency preference (print statements included)'''
         new_frequency = input("New frequency (short/long): ").lower()
         while new_frequency not in ["short", "long"]:
             new_frequency = input("Invalid. New frequency (short/long): ").lower()
         self.frequency = new_frequency
 
     def change_distribution(self):
+        '''Change distribution preference (print statements included)'''
         new_distribution = input("New distribution (fill/spread): ")
         while new_distribution not in ["fill", "spread"]:
             new_distribution = input("Invalid. New frequency (fill/spread): ").lower()
         self.distribution = new_distribution
 
     def json_preferences_converter(self):
+        '''Converts preferences to JSON format'''
         preferences_dict = {
             "frequency": self.frequency,
             "distribution": self.distribution,

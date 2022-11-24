@@ -44,6 +44,7 @@ class Brain:
         return smallest_day
 
     def finish_count(self, task, general_array):
+        """Used to finish placing task sessions even if days are full"""
         while True:
             if task.count > 0:
                 for i in range(0, task.daysUntilDeadline):

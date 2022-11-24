@@ -42,12 +42,14 @@ class GUI:
             return input(out)
 
     def check_done(self, tasks):
+        '''Checks whether a task is done or not'''
         if tasks[0].title != "Done":
             return 1
         else:
             return 0
 
     def show_tasks(self, tasks, done):
+        '''Prints all the tasks is a neat way'''
         print("List of tasks:")
         for i in range(0, len(tasks)):
             if tasks[i].title != "Done":
@@ -56,6 +58,7 @@ class GUI:
         print()
 
     def choose_task(self):
+        '''Print "which tasks to choose" method with error checking'''
         choice = input("\nWhich task (to exit type 0): ")
         while True:
             try:
@@ -72,4 +75,5 @@ class GUI:
             return int(choice)
 
     def clean_console(self):
+        '''Cleans console by printing many spaces'''
         print("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n")

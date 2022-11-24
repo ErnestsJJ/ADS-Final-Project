@@ -22,7 +22,7 @@ class GUI:
                                     f"\t{schedule[i][j][0]}: {schedule[i][j][1] * 2} sessions of 30 minutes ({schedule[i][j][1] * 60} min)")
 
     def what_to_do(self, schedule, preferences, error_type):
-        """Pregunta al usuario que desea hacer"""
+        """Ask the user what to do"""
         self.clean_console()
         self.printing(schedule, preferences)
         error = {

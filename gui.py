@@ -1,7 +1,7 @@
 class GUI:
 
     def printing(self, schedule, preferences):
-        """Used to print the information of the above-mentioned function"""
+        """Used to print the information of the how_much method (brain class)"""
         if schedule:  # If there are tasks
             print("STUDY SCHEDULE")
             for i in range(0, len(schedule)):  # Iterate though each day in the schedule

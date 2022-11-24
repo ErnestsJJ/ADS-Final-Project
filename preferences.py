@@ -16,7 +16,7 @@ class Preferences:
         self.created = datetime.date.today()
 
     def compare_time(self):
-        '''Compares time with previous time'''
+        '''Compares time with previous time to manage mark as done'''
         today = datetime.date.today()
         if today != self.created:
             days = (self.created - today).days * -1
@@ -83,6 +83,7 @@ class Preferences:
         return preferences_dict
 
     def what(self):
+        """Prints preferences and asks the user what to change about the current preferences"""
         print(
             f"Your actual preferences:\n\tStudy time per day: {self.study_time} hours\n\tFrequency: {self.frequency}\n\tSessions distribution: {self.distribution}\n")
         option = input("What do you want to change:\n\t1) Study time per day\n\t2) Sessions frequency (long/short)\n\t3) Sessions distribution\n\t4) Nothing\n\n: ")

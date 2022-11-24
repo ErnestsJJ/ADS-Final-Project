@@ -4,11 +4,13 @@ import json
 class JSON_Brain:
 
     def read_files(self, file):
+        '''Reads file'''
         with open(file, 'r') as file:
             data = json.load(file)
         return data
 
     def save_tasks(self, sorted_tasks):
+        '''Saves tasks to JSON'''
         all_tasks = []
         for task in sorted_tasks:
             task_json = task.json_converter()
@@ -19,6 +21,7 @@ class JSON_Brain:
             outfile.write(json_object)
 
     def save_preferences(self, preferences_json):
+        '''Saves preferences to JSON'''
         json_object = json.dumps(preferences_json, indent=4)
         with open("preferences_json.json", "w") as outfile:
             outfile.write(json_object)

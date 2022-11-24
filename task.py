@@ -102,7 +102,7 @@ class Task(Preferences):
     # Error handling
 
     def check_year_month(self, year_month, option):  # Option is 1 if year, 2 if month
-        '''Checks whether year and month entered is valid'''
+        '''Checks whether year and month entered are valid'''
         while True:
             if year_month != "":
                 try:
@@ -160,7 +160,7 @@ class Task(Preferences):
             break
 
     def mark_as_done(self):
-        '''Marks a task as done as well as asks for info'''
+        '''Marks a task as completly done or partially done'''
         sessions_done = input("How many hours have you completed: ")
         while True:
             try:

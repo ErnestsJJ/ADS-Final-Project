@@ -4,6 +4,7 @@ from task import Task
 class Brain:
 
     def sort_tasks(self, tasks, done):
+        '''This method sorts tasks in terms of deadline'''
         if tasks:
             sorted_tasks = []
             if done != 0:
@@ -33,6 +34,7 @@ class Brain:
         return general_array  # return the general_empty array
 
     def shortest_day(self, general_array, deadline):
+        '''Used to find the shortest day'''
         smallest = len(general_array[0])
         smallest_day = 0
         for i in range(1, deadline):
@@ -64,6 +66,7 @@ class Brain:
         return general_array  # When finished, return the general_array filled out
 
     def spread_out_tasks(self, tasks, preferences):
+        '''Arranges tasks if the "spread" preference is selected'''
         general_array = self.longer_task(tasks)
         for task in tasks:
             if task.title == "Done":
@@ -104,5 +107,6 @@ class Brain:
             return schedule  # return the schedule with each task, and it's time per day
 
     def check_done(self, tasks):
+        '''checks if a task is done'''
         if tasks:
             return tasks[0].title == "Done"

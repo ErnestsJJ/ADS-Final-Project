@@ -83,9 +83,9 @@ def main():
                 selected_task = gui.choose_task()
                 if selected_task != 0:
                     while True:
-                        selected_task = gui.choose_task()
                         if selected_task > len(sorted_tasks) or selected_task < 0:
                             print("Please enter a valid number")
+                            selected_task = gui.choose_task()
                         else:
                             break
                     task_index = selected_task - gui.check_done(sorted_tasks)

@@ -60,3 +60,7 @@ pgomez.ieu2021@student.ie.edu
 
 vmiguel.ieu2021@student.ie.edu
 
+**OS used:** Windows 11, MacOS 12
+**Python version:** Python 3.11
+
+

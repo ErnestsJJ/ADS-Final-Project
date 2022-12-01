@@ -20,8 +20,11 @@ This app lets you add, delete, and manage tasks to help you organize time better
 
 At first, you are prompted to add a task, which means that you add the task's title, due date, and the estimated number of hours it will take you to complete said task, or, you can change your preferences before adding tasks (see below).
 
+![What you will see when there aren't any tasks:](Notasks.jpg)
+
 After that, you have the freedom to add additional tasks, change deadlines and the estimated hours to complete as well as the title, or, you also have the possibility of deleting a task or marking it as done.
 
+![What you will see when tasks exist:](Withtasks.jpg)
 
 
 **Preferences:**

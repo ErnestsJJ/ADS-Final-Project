@@ -2,12 +2,12 @@
 Repository for the final project of ADS. IEU 2022
 
 ## Table of Contents:
- - What the project does;
- - Why the project is useful;
- - How users can get started with the project;
- - Where users can get help with our project;
- - Who maintains and contributes to the project;
- - Other specifications;
+ - [What the project does;](#what-the-project-does)
+ - [Why the project is useful;](#why-the-project-is-useful)
+ - [How users can get started with the project;](#how-users-can-get-started-with-the-project)
+ - [Where users can get help with our project;](#where-users-can-get-help-with-our-project)
+ - [Who maintains and contributes to the project;](#who-maintains-and-contributes-to-the-project)
+ - [Other specifications;](#other-specifications)
 
 
 ------------------------------------------------------------
@@ -20,11 +20,13 @@ This app lets you add, delete, and manage tasks to help you organize time better
 
 At first, you are prompted to add a task, which means that you add the task's title, due date, and the estimated number of hours it will take you to complete said task, or, you can change your preferences before adding tasks (see below).
 
+*This is what you will see when you first launch the app, or when you launch the app with no current tasks existing:*
 ![What you will see when there aren't any tasks:](Notasks.jpg)
 
 After that, you have the freedom to add additional tasks, change deadlines and the estimated hours to complete as well as the title, or, you also have the possibility of deleting a task or marking it as done.
 
-![What you will see when tasks exist:](Withtasks.jpg)
+*This is what you will see when you launch the app when you have current tasks active:*
+![What you will see when tasks exist:](Withtasks(1).jpg)
 
 
 **Preferences:**
